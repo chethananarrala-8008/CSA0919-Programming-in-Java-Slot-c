@@ -1,1 +1,31 @@
+ARMSTRONG NUMBER USING SINGLE INHERITANCE:
+class Number {
+    int n = 153;
+}
 
+class Armstrong extends Number {
+    void checkArmstrong() {
+        int temp = n;
+        int sum = 0;
+        int rem;
+
+        while (temp != 0) {
+            rem = temp % 10;
+            sum = sum + (rem * rem * rem);
+            temp = temp / 10;
+        }
+
+        if (sum == n) {
+            System.out.println(n + " is an Armstrong Number");
+        } else {
+            System.out.println(n + " is Not an Armstrong Number");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Armstrong obj = new Armstrong();
+        obj.checkArmstrong();
+    }
+}
