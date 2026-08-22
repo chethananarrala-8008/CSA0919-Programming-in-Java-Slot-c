@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SinAddition {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Formula: sin(A+B) = sinA cosB + cosA sinB");
+
+        System.out.print("Enter A in degrees: ");
+        double A = sc.nextDouble();
+
+        System.out.print("Enter B in degrees: ");
+        double B = sc.nextDouble();
+
+        double a = Math.toRadians(A);
+        double b = Math.toRadians(B);
+
+        double result = Math.sin(a) * Math.cos(b)
+                      + Math.cos(a) * Math.sin(b);
+
+        System.out.println("sin(A+B) = " + result);
+
+        sc.close();
+    }
+}
