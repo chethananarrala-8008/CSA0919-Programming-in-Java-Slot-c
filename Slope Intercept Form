@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SlopeIntercept {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Formula: y = mx + b");
+
+        System.out.print("Enter slope (m): ");
+        double m = sc.nextDouble();
+
+        System.out.print("Enter x: ");
+        double x = sc.nextDouble();
+
+        System.out.print("Enter y-intercept (b): ");
+        double b = sc.nextDouble();
+
+        double y = m * x + b;
+
+        System.out.println("Equation: y = " + m + "x + " + b);
+        System.out.println("Value of y = " + y);
+
+        sc.close();
+    }
+}
