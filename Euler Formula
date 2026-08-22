@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class EulerFormula {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Formula: e^(iθ) = cosθ + i sinθ");
+
+        System.out.print("Enter θ in degrees: ");
+        double theta = sc.nextDouble();
+
+        double radians = Math.toRadians(theta);
+
+        double real = Math.cos(radians);
+        double imaginary = Math.sin(radians);
+
+        System.out.println("Real part = " + real);
+        System.out.println("Imaginary part = " + imaginary);
+
+        System.out.println("e^(i" + theta + "°) = "
+                + real + " + "
+                + imaginary + "i");
+
+        sc.close();
+    }
+}
